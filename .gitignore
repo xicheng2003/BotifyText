@@ -1,0 +1,46 @@
+# Python/Conda
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Conda
+.conda/
+conda-meta/
+conda-bld/
+
+# Flask
+instance/
+.webassets-cache
+
+# Node.js/Vue.js
+frontend/node_modules/
+frontend/dist/
+frontend/.pnpm-store/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+
+# IDE and OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
