@@ -10,7 +10,7 @@
 ---
 
 ![BotifyText应用截图](assets/screenshot.png) 
-*(提示：请将您的应用截图命名为`screenshot.png`并放入`assets`文件夹中)*
+
 
 ## ✨ 主要特性
 
@@ -24,7 +24,7 @@
 
 - **后端**: Python, Flask, PySide6, pyserial
 - **前端**: Vue 3 (Composition API), Vite, TypeScript, shadcn/vue, Tailwind CSS
-- **桌面封装**: PySide6 (代替 PyWebView), PyInstaller
+- **桌面封装**: PySide6, PyInstaller
 - **自然语言处理**: Deepseek API (可替换)
 
 ## 🚀 快速开始

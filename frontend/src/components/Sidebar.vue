@@ -27,7 +27,7 @@ const openShareModal = async () => {
     const data = await response.json();
 
     if (data.status === 'success' && data.ip && data.port) {
-      shareUrl.value = `http://${data.ip}:${data.port}`;
+      shareUrl.value = `http://${data.ip}:${data.port}/web`;
     } else {
       shareError.value = data.message || '未能获取有效的服务器信息。';
     }

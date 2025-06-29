@@ -1,18 +1,23 @@
-import { fileURLToPath, URL } from 'node:url'
-
+// frontend/vite.config.ts
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
+import path from "path"
+import { resolve } from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        // 定义两个入口
+        desktop: resolve(__dirname, 'src/desktop.html'),
+        web: resolve(__dirname, 'src/web.html'),
+      },
     },
   },
 })
