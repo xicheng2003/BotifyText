@@ -22,9 +22,9 @@ function setTheme(theme: 'light' | 'dark' | 'auto') {
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">
-      <DropdownMenuItem @click="setTheme('light')">Light</DropdownMenuItem>
-      <DropdownMenuItem @click="setTheme('dark')">Dark</DropdownMenuItem>
-      <DropdownMenuItem @click="setTheme('auto')">System</DropdownMenuItem>
+      <DropdownMenuItem @click="setTheme('light')">浅色主题</DropdownMenuItem>
+      <DropdownMenuItem @click="setTheme('dark')">深色主题</DropdownMenuItem>
+      <DropdownMenuItem @click="setTheme('auto')">跟随系统</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>

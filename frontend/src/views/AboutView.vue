@@ -51,7 +51,7 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
               <li><a :href="`${REPO_URL}/blob/main/LICENSE`" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">许可证 (MIT)</a></li>
             </ul>
           </div>
-          <div class="pt-4 border-t space-y-2 mt-4">
+          <div class="pt-3 border-t space-y-2 mt-4">
             <p class="text-xs text-muted-foreground">页面由 Vue 3, Vite & shadcn/ui 强力驱动</p>
             <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
               <span class="text-xs">NLP由</span>
