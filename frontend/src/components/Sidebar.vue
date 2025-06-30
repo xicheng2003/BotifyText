@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 // --- 新增：导入分享功能所需的组件和图标 ---
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Bot, SlidersHorizontal, Info, Share2, SunMoon, Loader2 } from 'lucide-vue-next';
+import { Home, SlidersHorizontal, Info, Share2, SunMoon, Loader2 } from 'lucide-vue-next';
 import ThemeToggle from './ThemeToggle.vue';
 import QrcodeVue from 'qrcode.vue';
 
@@ -57,7 +57,7 @@ const copyUrlToClipboard = async () => {
       <nav class="flex flex-col items-center gap-4 mt-4">
         <Tooltip>
           <TooltipTrigger as-child>
-            <RouterLink to="/"><Button variant="outline" size="icon" class="h-12 w-12"><Bot class="h-6 w-6" /></Button></RouterLink>
+            <RouterLink to="/"><Button variant="outline" size="icon" class="h-12 w-12"><Home class="h-6 w-6" /></Button></RouterLink>
           </TooltipTrigger>
           <TooltipContent side="right"><p>控制台</p></TooltipContent>
         </Tooltip>

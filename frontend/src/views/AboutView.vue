@@ -1,3 +1,4 @@
+<!-- frontend/src/views/AboutView.vue (已优化) -->
 <script setup lang="ts">
 import PageHeader from '@/components/PageHeader.vue';
 import PageFooter from '@/components/PageFooter.vue';
@@ -6,13 +7,22 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
 </script>
 
 <template>
-  <div class="flex flex-col h-full">
+  <!--
+    在桌面应用中，h-full可以很好地工作。但在响应式的Web视图中，
+    min-h-screen能确保内容不足时页脚也能固定在底部，体验更佳。
+  -->
+  <div class="flex flex-col min-h-screen">
     <main class="flex-grow">
       <PageHeader />
 
-      <div class="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+      <!--
+        核心修改：调整了容器的内边距(px-4)和卡片间距(gap-4)，
+        使其在移动端更紧凑。
+      -->
+      <div class="container mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
 
-        <div class="md:col-span-2 p-6 bg-muted/40 rounded-lg border">
+        <!-- 卡片1: 关于项目 & 致谢 -->
+        <div class="md:col-span-2 p-4 sm:p-6 bg-muted/40 rounded-lg border">
           <h4 class="font-bold text-base mb-4 text-foreground">关于本项目</h4>
           <p class="text-muted-foreground leading-relaxed mb-6">
             该项目源于一次富有挑战的大学实习项目，是对先进机器人技术的一次实践性探索。我们基于 Modbus TCP 协议，在人机交互领域开拓了新的前沿，实现了直观的、基于文本的机器人轨迹控制。
@@ -31,7 +41,8 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
           </div>
         </div>
 
-        <div class="p-6 bg-muted/40 rounded-lg border flex flex-col justify-between">
+        <!-- 卡片2: 相关链接 & 技术驱动 -->
+        <div class="p-4 sm:p-6 bg-muted/40 rounded-lg border flex flex-col justify-between">
           <div>
             <h4 class="font-semibold text-foreground mb-4">相关链接</h4>
             <ul class="space-y-3 mb-6">
@@ -41,7 +52,7 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
               <li><a :href="`${REPO_URL}/blob/main/LICENSE`" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">许可证 (MIT)</a></li>
             </ul>
           </div>
-          <div class="pt-4 border-t space-y-2">
+          <div class="pt-4 border-t space-y-2 mt-4">
             <p class="text-xs text-muted-foreground">页面由 Vue 3, Vite & shadcn/ui 强力驱动</p>
             <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
               <span class="text-xs">NLP由</span>
