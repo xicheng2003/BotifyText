@@ -3,7 +3,7 @@
 import PageHeader from '@/components/PageHeader.vue';
 import PageFooter from '@/components/PageFooter.vue';
 
-const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-control";
+const REPO_URL = "https://github.com/xicheng2003/BotifyText";
 </script>
 
 <template>
@@ -54,7 +54,7 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
           <div class="pt-3 border-t space-y-2 mt-4">
             <p class="text-xs text-muted-foreground">页面由 Vue 3, Vite & shadcn/ui 强力驱动</p>
             <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
-              <span class="text-xs">NLP由</span>
+              <span class="text-xs">NLP 由</span>
               <img src="https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920" alt="Deepseek Logo" class="h-3.5" />
               <span class="text-xs">驱动</span>
             </a>

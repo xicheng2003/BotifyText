@@ -44,3 +44,10 @@ pnpm-debug.log*
 
 # Windows
 Thumbs.db
+
+# Inno Setup output
+Output/
+
+# PyInstaller temporary files
+*.spec
+build/

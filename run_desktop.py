@@ -17,6 +17,7 @@ from PySide6.QtCore import QUrl, Qt, QSize, QEvent, QTimer, Slot
 from PySide6.QtGui import QIcon, QColor, QPainter, QPixmap
 from PySide6.QtSvg import QSvgRenderer
 
+
 # --- 日志, Flask, resource_path 等部分代码保持不变 ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - [%(module)s] %(message)s')
 log = logging.getLogger(__name__)
@@ -130,6 +131,9 @@ class MainWindow(QMainWindow):
     def __init__(self, url):
         super().__init__()
         self.setWindowTitle("BotifyText")
+        # --- 核心修改：在这里设置窗口图标 ---
+        self.setWindowIcon(QIcon(resource_path("assets/bot_logo.ico")))
+        
         self.resize(1280, 800)
         self.setMinimumSize(940, 720)
         self.setWindowFlags(Qt.FramelessWindowHint)

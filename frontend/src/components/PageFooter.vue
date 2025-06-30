@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const APP_VERSION = "V1.0.0-beta";
+const APP_VERSION = "V1.0.0-release";
 const currentYear = new Date().getFullYear();
 </script>
 
