@@ -1,4 +1,4 @@
-<!-- frontend/src/views/AboutView.vue (已优化) -->
+<!-- frontend/src/views/AboutView.vue (无滚动条优化版) -->
 <script setup lang="ts">
 import PageHeader from '@/components/PageHeader.vue';
 import PageFooter from '@/components/PageFooter.vue';
@@ -8,21 +8,20 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
 
 <template>
   <!--
-    在桌面应用中，h-full可以很好地工作。但在响应式的Web视图中，
-    min-h-screen能确保内容不足时页脚也能固定在底部，体验更佳。
+    核心修改：
+    使用Grid布局，将页面分为两行：一个占据所有剩余空间的内容区(1fr)，
+    和一个高度自适应的页脚区(auto)。这能确保页脚总在底部且内容不会溢出。
   -->
-  <div class="flex flex-col min-h-screen">
-    <main class="flex-grow">
+  <div class="grid grid-rows-[1fr_auto] h-full">
+    <!-- 主内容区，如果内容真的非常多，也只会在这里内部滚动 -->
+    <main class="overflow-y-auto">
       <PageHeader />
 
-      <!--
-        核心修改：调整了容器的内边距(px-4)和卡片间距(gap-4)，
-        使其在移动端更紧凑。
-      -->
+      <!-- 为了确保内容能在一页内展示，略微减小了卡片的垂直内边距 (p-4) -->
       <div class="container mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
 
         <!-- 卡片1: 关于项目 & 致谢 -->
-        <div class="md:col-span-2 p-4 sm:p-6 bg-muted/40 rounded-lg border">
+        <div class="md:col-span-2 p-4 bg-muted/40 rounded-lg border">
           <h4 class="font-bold text-base mb-4 text-foreground">关于本项目</h4>
           <p class="text-muted-foreground leading-relaxed mb-6">
             该项目源于一次富有挑战的大学实习项目，是对先进机器人技术的一次实践性探索。我们基于 Modbus TCP 协议，在人机交互领域开拓了新的前沿，实现了直观的、基于文本的机器人轨迹控制。
@@ -42,7 +41,7 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
         </div>
 
         <!-- 卡片2: 相关链接 & 技术驱动 -->
-        <div class="p-4 sm:p-6 bg-muted/40 rounded-lg border flex flex-col justify-between">
+        <div class="p-4 bg-muted/40 rounded-lg border flex flex-col justify-between">
           <div>
             <h4 class="font-semibold text-foreground mb-4">相关链接</h4>
             <ul class="space-y-3 mb-6">
@@ -63,6 +62,8 @@ const REPO_URL = "https://github.com/xicheng2003/text-based-robot-trajectory-con
         </div>
       </div>
     </main>
+
+    <!-- 页脚现在是Grid布局的一部分，会被固定在底部 -->
     <PageFooter />
   </div>
 </template>
