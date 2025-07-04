@@ -2,11 +2,12 @@
 
 **一个现代、直观、基于文本的机器人轨迹控制桌面应用。**
 
-[![版本](https://img.shields.io/badge/version-2.2.0-blue.svg)](https://github.com/YOUR_USERNAME/BotifyText/releases)
+[![版本](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/xicheng2003/BotifyText/releases)
 [![许可证](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-*将您想让机器人执行的动作，用简单的自然语言或指令写下来，`BotifyText` 会将其转化为精准的轨迹运动。*
+*将您想让机器人（当前主要适配培高/博创系统）执行的动作，用简单的自然语言或指令写下来，`BotifyText` 会将其转化为精准的轨迹运动。*
 
+> 当前项目由![text-based-robot-trajectory-control](https://github.com/xicheng2003/text-based-robot-trajectory-control)迁移而来，已从Web页面应用升级成全新的桌面应用，给您带来全新的体验！
 ---
 
 ![BotifyText应用截图](assets/screenshot.png) 
